@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { Hero } from "./hero";
 
 @Component({
+  moduleId: module.id.toString(),
   template: `
     <div *ngIf="hero">
         <h2>{{hero.name}} details!</h2>
@@ -14,6 +15,7 @@ import { Hero } from "./hero";
     </div>
     `,
   selector: 'my-hero-detail',
+  styleUrls: [ "hero-detail.component.css" ]
 })
 export class HeroDetailComponent {
     @Input()

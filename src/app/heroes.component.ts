@@ -4,6 +4,7 @@ import { Hero } from "./hero";
 import { HeroService } from "./hero.service";
 
 @Component({
+  moduleId: module.id.toString(),
   selector: 'my-heroes',
   template: `
     <h2>{{hero.name}} details!</h2>
@@ -21,7 +22,7 @@ import { HeroService } from "./hero.service";
 
     </div>
     `, 
-    styleUrls: [ "./heroes.component.css" ]
+    styleUrls: [ "heroes.component.css" ]
 })
 export class HeroesComponent implements OnInit  {
 
