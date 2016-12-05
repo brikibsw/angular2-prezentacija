@@ -17,7 +17,7 @@ import { Hero } from "./hero";
         </li>
       </ul>
 
-      <my-hero-detail></my-hero-detail>
+      <my-hero-detail [hero]="selectedHero"></my-hero-detail>
 
     </div>
     `,

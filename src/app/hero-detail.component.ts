@@ -16,5 +16,6 @@ import { Hero } from "./hero";
   selector: 'my-hero-detail',
 })
 export class HeroDetailComponent {
+    @Input()
     hero: Hero;
 }
