@@ -17,15 +17,7 @@ export class Hero {
           <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
       </ul>
-
-      <h2>{{selectedHero.name}} details!</h2>
-      <div>
-        <label>id: </label>
-        {{selectedHero.id}}
-      </div>
-
-      <label>name: </label>
-      <input [(ngModel)]="selectedHero.name" placeholder="name">
+     
     </div>
     `
 })
