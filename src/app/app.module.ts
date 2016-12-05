@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 
+import { InMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./in-memory-data.service";
+
 import { AppComponent } from './app.component';
 import { HeroesComponent } from "./heroes.component"; 
 import { HeroDetailComponent } from "./hero-detail.component";
@@ -16,32 +19,15 @@ import { DashboardComponent } from "./dashboard.component";
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent,
+    HeroDetailComponent,    
     DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path: "",
-        redirectTo: "/dashboard", 
-        pathMatch: "full"
-      },
-      {
-        path: "heroes",
-        component: HeroesComponent
-      },
-      {
-        path: "dashboard",
-        component: DashboardComponent
-      },
-      {
-        path: "detail/:id",
-        component: HeroDetailComponent
-      }
-    ])
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    AppRoutingModule
   ],
   providers: [
     HeroService
