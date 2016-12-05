@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Hero } from "./hero";
+
 @Component({
   selector: 'my-app',
   template: `
@@ -15,15 +17,7 @@ import { Component } from '@angular/core';
         </li>
       </ul>
 
-      <div *ngIf="selectedHero">
-        <h2>{{selectedHero.name}} details!</h2>
-        <div>
-          <label>id: </label>
-          {{selectedHero.id}}
-        </div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedHero.name" placeholder="name">
-      </div>
+      <my-hero-detail></my-hero-detail>
 
     </div>
     `,
