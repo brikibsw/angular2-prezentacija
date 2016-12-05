@@ -11,6 +11,7 @@ import "rxjs/add/operator/switchMap";
   moduleId: module.id.toString(),
   templateUrl: "hero-detail.component.html",
   selector: 'my-hero-detail',
+  styleUrls: [ "hero-detail.component.css" ]
 })
 export class HeroDetailComponent implements OnInit {
   constructor(
