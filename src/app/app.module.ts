@@ -23,25 +23,7 @@ import { DashboardComponent } from "./dashboard.component";
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path: "",
-        redirectTo: "/dashboard", 
-        pathMatch: "full"
-      },
-      {
-        path: "heroes",
-        component: HeroesComponent
-      },
-      {
-        path: "dashboard",
-        component: DashboardComponent
-      },
-      {
-        path: "detail/:id",
-        component: HeroDetailComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [
     HeroService
