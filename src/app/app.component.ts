@@ -4,6 +4,7 @@ export class Hero {
   name: string;
 }
 @Component({
+  moduleId: module.id.toString(),
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
@@ -13,7 +14,8 @@ export class Hero {
       <label>name: </label>
       <input [(ngModel)]="hero.name" placeholder="name">
     </div>
-    `
+    `,
+    styleUrls: [ "app.component.css" ]
 })
 export class AppComponent {
   title = 'Tour of Heroes';
